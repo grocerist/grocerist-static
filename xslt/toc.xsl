@@ -21,7 +21,7 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
-                    <div class="container-fluid">
+                    <div>
                         <div class="card">
                             <div class="card-header">
                                 <h1>Table of Contents</h1>
@@ -30,8 +30,11 @@
                                 <table class="table table-striped display" id="tocTable" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Titel</th>
-                                            <th scope="col">Dateinname</th>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Owner</th>
+                                            <th scope="col">District</th>
+                                            <th scope="col">Goods</th>
+                                            <th scope="col">file name</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -47,6 +50,15 @@
                                                         </xsl:attribute>
                                                         <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
                                                     </a>
+                                                </td>
+                                                <td>
+                                                    <xsl:for-each select=".//tei:person[@role='main_person']/*/text()"><xsl:value-of select="."/></xsl:for-each>
+                                                </td>
+                                                <td>
+                                                    <xsl:for-each select=".//tei:place[@type='district']/tei:placeName/text()"><span class="badge badge-info"><xsl:value-of select="."/></span></xsl:for-each>
+                                                </td>
+                                                <td>
+                                                    <xsl:for-each select=".//tei:keywords//tei:term/text()"><span class="badge badge-secondary"><xsl:value-of select="."/></span></xsl:for-each>
                                                 </td>
                                                 <td>
                                                     <xsl:value-of select="tokenize($full_path, '/')[last()]"/>

@@ -118,3 +118,7 @@ button#ssDoSearch {
 #github-logo:hover {
     transform: scale(1.05);
 }
+
+.badge {
+    margin: 2px;
+}

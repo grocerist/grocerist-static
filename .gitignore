@@ -141,3 +141,5 @@ desktop.ini
 
 # MacOS
 .DS_Store
+/data/editions
+/html/*.xml
