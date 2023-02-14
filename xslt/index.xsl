@@ -74,7 +74,7 @@
                             </div>                          
                         </div>
                     </div>
-                    <div class="container" style="margin-top:1em;">
+                    <!--<div class="container" style="margin-top:1em;">
                         <div class="row">
                             <div class="col-md-4">
                                 <a href="listperson.html" class="index-link">                                   
@@ -119,7 +119,7 @@
                                 </a>                                    
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <xsl:call-template name="html_footer"/>
                 </div>
             </body>
